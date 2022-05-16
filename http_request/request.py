@@ -9,6 +9,7 @@ url = "https://api.deepsound.cn/tts"
 appId = 'your_app_id'
 appKey = 'your_app_key'
 token = 'your_token'
+content = '这是语音测试文本'
 
 
 def checksum(body_dict):
@@ -21,8 +22,7 @@ def checksum(body_dict):
 
 
 def text_content():
-    text = '这是语音测试文本'
-    base64_str = base64.urlsafe_b64encode(text.encode("utf-8"))
+    base64_str = base64.urlsafe_b64encode(content.encode("utf-8"))
     return base64_str.decode('utf-8')
 
 
